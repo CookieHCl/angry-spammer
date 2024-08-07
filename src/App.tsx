@@ -1,13 +1,12 @@
+import Button from "@suid/material/Button";
 import { createSignal } from 'solid-js'
 
-function App() {
-  const [count, setCount] = createSignal(0)
+export default function App() {
+  const [count, setCount] = createSignal(0);
 
   return (
-    <button onClick={() => setCount((count) => count + 1)}>
+    <Button variant="contained" onClick={() => setCount((count) => count + 1)}>
       count is {count()}
-    </button>
-  )
+    </Button>
+  );
 }
-
-export default App
